@@ -33,10 +33,57 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+-- tree sitter
 require("lazy").setup({{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}})
+-- auto close
 require("autoclose").setup({
    keys = {
 
       ["("] = { escape = true, close = true, pair = "()", disabled_filetypes = {} },
    },
 })
+-- mason
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+-- bufferline
+vim.opt.termguicolors = true
+require("bufferline").setup{
+	options = {
+		mode = "buffers",
+		offsets = {
+			{
+				filetype = "NvimTree",
+				text = "File Explorer",
+				highlight = "Directory",
+				separator = "true"
+			}
+		},
+	},
+}
+-- auto tag
+require('nvim-ts-autotag').setup({
+  opts = {
+    -- Defaults
+    enable_close = true, -- Auto close tags
+    enable_rename = true, -- Auto rename pairs of tags
+    enable_close_on_slash = false -- Auto close on trailing </
+  },
+  -- Also override individual filetype configs, these take priority.
+  -- Empty by default, useful if one of the "opts" global settings
+  -- doesn't work well in a specific filetype
+  per_filetype = {
+    ["html"] = {
+      enable_close = false
+    }
+  }
+})
+
+-- prettier 
+require('config.prettier-config')
