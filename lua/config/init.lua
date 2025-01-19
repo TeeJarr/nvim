@@ -38,7 +38,7 @@ require("lazy").setup({ { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"
 -- auto close
 require("autoclose").setup({
 	keys = {
-
+		["<"] = { escpae = true, close = true, pair = "<>", disabled_filetypes = {} },
 		["("] = { escape = true, close = true, pair = "()", disabled_filetypes = {} },
 	},
 })

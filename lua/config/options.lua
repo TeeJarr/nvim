@@ -7,3 +7,4 @@ opt.number = true
 opt.shiftwidth = 2
 opt.tabstop = 2
 opt.wrap = false
+opt.scrolloff = 10
