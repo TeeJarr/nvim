@@ -35,6 +35,11 @@ require("lazy").setup({
 })
 -- tree sitter
 require("lazy").setup({ { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" } })
+require("nvim-treesitter.configs").setup({
+	highlight = {
+		enabled = true,
+	},
+})
 -- auto close
 require("autoclose").setup({
 	keys = {
@@ -62,7 +67,7 @@ require("bufferline").setup({
 				filetype = "NvimTree",
 				text = "File Explorer",
 				highlight = "Directory",
-				separator = "true",
+				separator = true,
 			},
 		},
 	},
@@ -80,6 +85,9 @@ require("nvim-ts-autotag").setup({
 	-- doesn't work well in a specific filetype
 	per_filetype = {
 		["html"] = {
+			enable_close = false,
+		},
+		["javascript"] = {
 			enable_close = false,
 		},
 	},

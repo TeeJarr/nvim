@@ -5,7 +5,8 @@ key.set("n", ";", ":")
 key.set("n", "<leader>ee", ":NvimTreeToggle<CR>")
 key.set("n", "<leader>ef", ":NvimTreeFocus<CR>")
 --Bufferline
-
+key.set("n", "<leader>bn", ":BufferLineCycleNext<CR>")
+key.set("n", "<leader>bp", ":BufferLineCyclePrev<CR>")
 -- telescope
 key.set("n", "<leader>ft", ":Telescope<CR>")
 key.set("n", "<leader>ff", ":Telescope find_files<CR>")
