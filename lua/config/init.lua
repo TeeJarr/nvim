@@ -92,3 +92,10 @@ require("nvim-ts-autotag").setup({
 		},
 	},
 })
+
+-- transparent
+require("transparent").setup({
+	extra_groups = {
+		"NvimTreeNormal",
+	},
+})
