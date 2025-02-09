@@ -15,6 +15,7 @@ return {
 				html = { "prettier" },
 				json = { "prettier" },
 				lua = { "stylua" },
+				cpp = { "clang-formatter" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

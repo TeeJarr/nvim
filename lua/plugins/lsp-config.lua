@@ -4,5 +4,6 @@ return {
 		require("lspconfig").lua_ls.setup({})
 		require("lspconfig").ts_ls.setup({})
 		require("lspconfig").cssls.setup({})
+		require("lspconfig").clangd.setup({})
 	end,
 }
