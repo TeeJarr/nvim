@@ -1,0 +1,72 @@
+require("transparent").setup({
+	-- table: default groups
+	groups = {
+		"Normal",
+		"NormalNC",
+		"Comment",
+		"Constant",
+		"Special",
+		"Identifier",
+		"Statement",
+		"PreProc",
+		"Type",
+		"Underlined",
+		"Todo",
+		"String",
+		"Function",
+		"Conditional",
+		"Repeat",
+		"Operator",
+		"Structure",
+		"LineNr",
+		"NonText",
+		"SignColumn",
+		"CursorLine",
+		"CursorLineNr",
+		"StatusLine",
+		"StatusLineNC",
+		"EndOfBuffer",
+	},
+	-- table: additional groups that should be cleared
+	extra_groups = {
+		-- Nvim Tree
+		"NvimTreeNormal",
+		"NvimTreeNormalNC",
+		"NvimTreeCursorLine",
+		"NvimTreeVertSplit", -- Vertical split for nvim-tree
+		"NvimTreeEndOfBuffer", -- '~' characters at the end of buffer
+		"NvimTreeRootFolder", -- The root folder text
+		"NvimTreeFolderName", -- Folder names
+		"NvimTreeOpenedFolderName", -- Opened folder names
+		"NvimTreeEmptyFolderName", -- Empty folder names
+		"NvimTreeIndentMarker", -- Indent markers
+		-- Bufferline
+		"BufferlineTabClose",
+		"BufferlineFill",
+		"BufferlineFill",
+		"BufferlineBackground",
+		"BufferlineSeperator",
+		"BufferlineIndicatorSelected",
+		-- Lualine
+		"LualineNormal",
+		"LualineInsert",
+		"LualineVisual",
+		"LualineReplace",
+		"LualineCommand",
+		"Normal",
+		"NormalFloat",
+		"FloatBorder",
+		"MsgArea", -- The message area (where command output appears)
+		"StatusLine", -- Status line for other modes
+		"WinBar", -- Window barLualineInactive",
+	},
+	-- table: groups you don't want to clear
+	exclude_groups = {},
+	-- function: code to be executed after highlight groups are cleared
+	-- Also the user event "TransparentClear" will be triggered
+	on_clear = function() end,
+})
+
+vim.cmd([[
+	hi NvimTreeVertSplit guibg=NONE guifg=NONE
+]])

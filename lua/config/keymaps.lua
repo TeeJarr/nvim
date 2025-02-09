@@ -13,3 +13,9 @@ key.set("n", "<leader>ff", ":Telescope find_files<CR>")
 key.set("n", "<leader>fb", ":Telescope current_buffer_fuzzy_find<CR>")
 -- transparency
 key.set("n", "<leader>tt", ":TransparentToggle<CR>")
+--harpoon
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+
+key.set("n", "<leader>fm", mark.add_file)
+key.set("n", "<leader>fh", ui.toggle_quick_menu)

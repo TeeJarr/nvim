@@ -43,7 +43,7 @@ require("nvim-treesitter.configs").setup({
 -- auto close
 require("autoclose").setup({
 	keys = {
-		["<"] = { escpae = true, close = true, pair = "<>", disabled_filetypes = {} },
+		["<"] = { escpae = true, close = true, pair = "<>", disabled_filetypes = { ".jsx", ".html", ".tsx" } },
 		["("] = { escape = true, close = true, pair = "()", disabled_filetypes = {} },
 	},
 })
@@ -94,8 +94,5 @@ require("nvim-ts-autotag").setup({
 })
 
 -- transparent
-require("transparent").setup({
-	extra_groups = {
-		"NvimTreeNormal",
-	},
-})
+-- Optional, you don't have to run setup.
+-- lualine
