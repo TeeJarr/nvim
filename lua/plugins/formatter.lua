@@ -15,12 +15,20 @@ return {
 				html = { "prettier" },
 				json = { "prettier" },
 				lua = { "stylua" },
-				cpp = { "clang-formatter" },
+				cpp = { "clang-format" },
+				cmake = { "cmake-_format" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,
 				timeout_ms = 500,
+			},
+			formatters = {
+				clang_format = {
+					command = "clang-format",
+					args = { "--style=file" }, -- Uses .clang-format in project
+					stdin = true, -- Ensures input is read from stdin
+				},
 			},
 		})
 

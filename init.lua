@@ -1,4 +1,5 @@
 require("config")
-require("config/options")
-require("config/keymaps")
-require("plugins/themes")
+require("config.options")
+require("config.keymaps")
+require("plugins.themes")
+require("config.plugin_opts.cmake")
