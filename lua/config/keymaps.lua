@@ -23,3 +23,5 @@ key.set("n", "<leader>fh", ui.toggle_quick_menu)
 --CMake
 key.set("n", "<leader>cb", ":CMakeBuild<CR>")
 key.set("n", "<leader>cg", ":CMakeGenerate<CR>")
+key.set("n", "<leader>cr", ":CMakeRun<CR>")
+key.set("n", "<leader>ct", ":CMakeToggle<CR>")
