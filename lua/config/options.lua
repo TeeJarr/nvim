@@ -19,5 +19,5 @@ require("config.plugin_opts.nordic")
 require("config.plugin_opts.modus")
 require("config.plugin_opts.mellifluous")
 
-vim.cmd.colorscheme("lackluster-night")
+vim.cmd.colorscheme("base16-black-metal-gorgoroth")
 -- Telescope
