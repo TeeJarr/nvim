@@ -43,11 +43,16 @@ require("nvim-treesitter.configs").setup({
 	},
 })
 -- auto close
-require("autoclose").setup({
-	keys = {
-		["("] = { escape = true, close = true, pair = "()", disabled_filetypes = {} },
-	},
-})
+-- require("autoclose").setup({
+-- 	keys = {
+-- 		["("] = { escape = true, close = true, pair = "()" },
+-- 		["'"] = { escape = true, close = true, pair = "''" },
+-- 	},
+-- 	options = {
+-- 		disabled_filetypes = { "text", "markdown" },
+-- 	},
+-- })
+
 -- mason
 require("mason").setup({
 	ui = {
@@ -58,6 +63,7 @@ require("mason").setup({
 		},
 	},
 })
+
 -- bufferline
 -- vim.opt.termguicolors = true
 -- require("bufferline").setup({
@@ -73,6 +79,7 @@ require("mason").setup({
 -- 		},
 -- 	},
 -- })
+
 -- auto tag
 require("nvim-ts-autotag").setup({
 	opts = {

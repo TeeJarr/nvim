@@ -1,6 +1,8 @@
 local key = vim.keymap
 --Nvim Keymaps
 key.set("n", ";", ":")
+-- key.set("n", "<leader>so", ":source $HOME/.config/nvim/init.lua <CR>")
+key.set("n", "<leader>/", ":noh<CR>")
 key.set("n", "<leader>-", ":split<CR>")
 key.set("n", "<leader>\\", ":vsplit<CR>")
 --Nvim-Tree Keymaps
@@ -21,7 +23,10 @@ local ui = require("harpoon.ui")
 key.set("n", "<leader>fm", mark.add_file)
 key.set("n", "<leader>fh", ui.toggle_quick_menu)
 --CMake
-key.set("n", "<leader>cb", ":CMakeBuild<CR>")
-key.set("n", "<leader>cg", ":CMakeGenerate<CR>")
+key.set("n", "<leader>cb", ":CMakeBuild!<CR>")
+key.set("n", "<leader>cg", ":CMakeGenerate!<CR>")
 key.set("n", "<leader>cr", ":CMakeRun<CR>")
 key.set("n", "<leader>ct", ":CMakeToggle<CR>")
+--TODO-Comments
+key.set("n", "<leader>tt", ":TodoTelescope<CR>")
+key.set("n", "<leader>tf", ":Trouble todo<CR>")
