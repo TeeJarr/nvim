@@ -43,15 +43,15 @@ require("nvim-treesitter.configs").setup({
 	},
 })
 -- auto close
--- require("autoclose").setup({
--- 	keys = {
--- 		["("] = { escape = true, close = true, pair = "()" },
--- 		["'"] = { escape = true, close = true, pair = "''" },
--- 	},
--- 	options = {
--- 		disabled_filetypes = { "text", "markdown" },
--- 	},
--- })
+require("autoclose").setup({
+	keys = {
+		["("] = { escape = true, close = true, pair = "()" },
+		["'"] = { escape = true, close = true, pair = "''" },
+	},
+	options = {
+		disabled_filetypes = { "text", "markdown" },
+	},
+})
 
 -- mason
 require("mason").setup({
@@ -99,6 +99,12 @@ require("nvim-ts-autotag").setup({
 			enable_close = false,
 		},
 		[".cpp"] = {
+			enable_close = true,
+		},
+		[".md"] = {
+			enable_close = false,
+		},
+		["markdown"] = {
 			enable_close = false,
 		},
 	},

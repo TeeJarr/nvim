@@ -17,6 +17,7 @@ return {
 				lua = { "stylua" },
 				cpp = { "clang-format" },
 				cmake = { "cmake-_format" },
+				python = { "pyproject-fmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

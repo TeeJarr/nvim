@@ -17,14 +17,17 @@ opt.termguicolors = true
 opt.formatoptions = "cro"
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+vim.opt.fillchars = { eob = " " }
 
 --FIXME
 
-require("config.plugin_opts.nordic")
+-- require("config.plugin_opts.nordic")
 require("config.plugin_opts.modus")
-require("config.plugin_opts.mellifluous")
+-- require("config.plugin_opts.mellifluous")
 require("config.plugin_opts.cmake")
 require("config.plugin_opts.mini")
+require("config.plugin_opts.catppuccian")
+-- require("config.plugin_opts.rose-pine")
 
-vim.cmd.colorscheme("base16-black-metal-gorgoroth")
+vim.cmd.colorscheme("catppuccin-macchiato")
 -- Telescope

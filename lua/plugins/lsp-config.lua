@@ -4,6 +4,18 @@ return {
 		require("lspconfig").lua_ls.setup({})
 		require("lspconfig").ts_ls.setup({})
 		require("lspconfig").cssls.setup({})
-		require("lspconfig").clangd.setup({})
+		require("lspconfig").clangd.setup({
+			settings = {
+				clangd = {
+					InlayHints = {
+						Designators = true,
+						Enabled = true,
+						ParameterNames = true,
+						DeducedTypes = true,
+					},
+					fallbackFlags = { "-std=c++20" },
+				},
+			},
+		})
 	end,
 }
