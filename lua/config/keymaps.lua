@@ -43,3 +43,5 @@ key.set("n", "<F3>", dap.step_out, {})
 key.set("n", "<Leader>dv", dap.step_over, {})
 key.set("n", "<Leader>di", dap.step_into, {})
 key.set("n", "<Leader>do", dap.step_out, {})
+
+key.set("n", "<leader>ve", ":Trouble<CR>")
