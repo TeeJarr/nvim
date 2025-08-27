@@ -94,9 +94,19 @@ require("nvim-ts-autotag").setup({
 	per_filetype = {
 		["html"] = {
 			enable_close = true,
+			enable_close_on_slash = true,
+			enable_rename = true,
 		},
 		["javascript"] = {
-			enable_close = false,
+			enable_close = true,
+		},
+		["angularhtml"] = {
+			enable_close = true,
+			enable_close_on_slash = true,
+			enable_rename = true,
+		},
+		["typescript"] = {
+			enable_close = true,
 		},
 		[".cpp"] = {
 			enable_close = true,

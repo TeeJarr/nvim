@@ -10,7 +10,6 @@ return {
 			view = {
 				side = "right",
 			},
-			open_on_setup = false,
 		})
 	end,
 }
