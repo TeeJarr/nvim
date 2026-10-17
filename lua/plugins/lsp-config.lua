@@ -1,10 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	config = function()
-		require("lspconfig").lua_ls.setup({})
-		require("lspconfig").ts_ls.setup({})
-		require("lspconfig").cssls.setup({})
-		require("lspconfig").clangd.setup({
+		vim.lsp.config("clangd", {
 			settings = {
 				clangd = {
 					InlayHints = {
@@ -17,5 +14,6 @@ return {
 				},
 			},
 		})
+		vim.lsp.enable({ "lua_ls", "ts_ls", "cssls", "clangd" })
 	end,
 }

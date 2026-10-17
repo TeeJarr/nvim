@@ -6,12 +6,16 @@ return {
 			-- add the config here
 			themes = {
 				{
+					name = "tokyonight",
+					colorscheme = "tokyonight",
+				},
+				{
 					name = "moonfly",
-					colorscheme = "bluz71/vim-moonfly-colors",
+					colorscheme = "moonfly",
 				},
 				{
 					name = "catppuccin",
-					colorscheme = "catppuccin/nvim",
+					colorscheme = "catppuccin",
 				},
 			},
 		})

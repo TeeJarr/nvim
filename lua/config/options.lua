@@ -29,7 +29,7 @@ require("config.plugin_opts.mini")
 require("config.plugin_opts.catppuccian")
 -- require("config.plugin_opts.rose-pine")
 
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("tokyonight")
 -- Telescope
 require("lualine").setup({
 	options = {
