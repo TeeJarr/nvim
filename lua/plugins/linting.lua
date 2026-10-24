@@ -14,7 +14,6 @@ return {
 			html = { "eslint_d" },
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
-			cpp = { "eslint_d" },
 		}
 
 		vim.keymap.set("n", "<leader>l", function()

@@ -14,6 +14,14 @@ return {
 				},
 			},
 		})
-		vim.lsp.enable({ "lua_ls", "ts_ls", "cssls", "clangd" })
+		vim.lsp.config("rust_analyzer", {
+			settings = {
+				["rust-analyzer"] = {
+					check = { command = "clippy" },
+					cargo = { allFeatures = true },
+				},
+			},
+		})
+		vim.lsp.enable({ "lua_ls", "ts_ls", "cssls", "clangd", "rust_analyzer" })
 	end,
 }
